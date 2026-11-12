@@ -43,3 +43,12 @@
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*
+
+/.private/
+/imports/
+/exports/
+/reports/
+/hub/previews/
+**/__pycache__/
+**/*.sqlite
+**/*.sqlite3

@@ -1,0 +1,4 @@
+[
+  {"contains": "Ukázkový nákup", "category": "Potraviny", "kind": "expense"},
+  {"contains": "Ukázkový převod na spoření", "category": "Vlastní převod", "kind": "transfer"}
+]

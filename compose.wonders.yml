@@ -1,0 +1,75 @@
+name: wonders-finance
+
+x-database: &database
+  POSTGRES_USER: wonders
+  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run python3 companion/setup_local.py first}
+  POSTGRES_DB: wonders_production
+
+x-app: &app
+  <<: *database
+  SECRET_KEY_BASE: ${SECRET_KEY_BASE:?Run python3 companion/setup_local.py first}
+  SELF_HOSTED: "true"
+  RAILS_FORCE_SSL: "false"
+  RAILS_ASSUME_SSL: "false"
+  DB_HOST: db
+  DB_PORT: 5432
+  REDIS_URL: redis://redis:6379/1
+
+services:
+  web:
+    build: .
+    image: wonders-finance:local
+    environment: *app
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - app-storage:/rails/storage
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  worker:
+    image: wonders-finance:local
+    command: bundle exec sidekiq
+    environment: *app
+    volumes:
+      - app-storage:/rails/storage
+    depends_on:
+      web:
+        condition: service_started
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: postgres:16
+    environment: *database
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  app-storage:
+  postgres-data:
+  redis-data:

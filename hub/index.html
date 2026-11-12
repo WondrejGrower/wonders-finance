@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Wonders · Domov</title>
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Hlavní navigace">
+      <a class="brand" href="#home" aria-label="Wonders domov"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 13l7 17 7-14 7 14 7-17M20 16V7m0 5c-5 0-7-3-7-6 5 0 7 2 7 6zm0 1c5 0 7-3 7-6-5 0-7 2-7 6z"/></svg><span>WONDERS<span class="brand-sub">PERSONAL SPACE</span></span></a>
+      <nav>
+        <a class="nav-link active" href="#home" data-view="home"><span aria-hidden="true">⌂</span> Domov</a>
+        <a class="nav-link" href="#finance" data-view="finance"><span aria-hidden="true">◈</span> Moje finance</a>
+        <a class="nav-link" href="http://127.0.0.1:8777" target="_blank" rel="noopener"><span aria-hidden="true">♧</span> Bitcoin Forest ↗</a>
+        <a class="nav-link" href="http://homeassistant.local/" target="_blank" rel="noopener"><span aria-hidden="true">⌘</span> Home Assistant ↗</a>
+      </nav>
+      <div class="sidebar-bottom"><span class="avatar">W</span><div>Wondrej<small>Omarchy notebook</small></div><span class="leaf">✳</span></div>
+    </aside>
+    <main>
+      <header class="topbar"><span id="date">Tvůj domácí přehled</span><span class="prototype"><i></i> NÁVRH · UKÁZKOVÁ DATA</span></header>
+      <section id="home-view" aria-labelledby="greeting">
+        <div class="welcome"><div><p class="eyebrow">VŠECHNO MÁ SVŮJ RYTMUS</p><h1 id="greeting">Doma ve svém světě.</h1><p>Domácnost, zahrada a přehled. Na jednom místě.</p></div><div class="time"><time id="clock">--:--</time><span>Europe / Prague</span></div></div>
+        <div class="dashboard">
+          <article class="card garden-card">
+            <div class="card-top"><span class="eyebrow">TVŮJ ZELENÝ SVĚT</span><span class="tag">UKÁZKA KLIMATU</span></div>
+            <h2>Prostor pro růst.</h2><p class="subtle">Přehled pěstírny · AC Infinity</p>
+            <svg class="botanical" viewBox="0 0 550 320" aria-hidden="true">
+              <defs><linearGradient id="foliage" x2=".4" y2="1"><stop stop-color="#bbdba0"/><stop offset="1" stop-color="#45654c"/></linearGradient><radialGradient id="halo"><stop stop-color="#8cab60" stop-opacity=".17"/><stop offset="1" stop-color="#8cab60" stop-opacity="0"/></radialGradient></defs>
+              <ellipse cx="300" cy="160" rx="230" ry="150" fill="url(#halo)"/>
+              <g class="plant plant-back" fill="url(#foliage)" stroke="#7e9a6b" stroke-width="1"><path d="M375 300Q395 198 349 94" fill="none"/><path d="M370 159Q302 172 287 116Q351 107 370 159M381 202Q436 195 444 141Q391 143 381 202M379 243Q316 245 307 197Q362 188 379 243M361 126Q390 85 370 49Q336 78 361 126"/></g>
+              <g class="plant" fill="url(#foliage)" stroke="#88a879" stroke-width="1.2"><path d="M238 312Q229 230 271 57" fill="none"/><path d="M244 228Q172 234 149 172Q219 155 244 228M247 204Q312 215 337 154Q269 140 247 204M257 150Q187 149 174 94Q242 87 257 150M264 119Q323 115 332 65Q280 63 264 119M271 76Q241 39 264 6Q291 37 271 76"/></g>
+              <g fill="none" stroke="#4a6250"><ellipse cx="278" cy="308" rx="144" ry="12"/><path d="M125 294h325"/></g>
+            </svg>
+            <div class="climate"><div><small>TEPLOTA</small><strong>24,8<span>°C</span></strong></div><div><small>VLHKOST</small><strong>64<span>%</span></strong></div><div><small>VPD</small><strong>1,11<span>kPa</span></strong></div></div>
+            <div class="card-foot"><span><i class="dot"></i> Návrh · zařízení není připojené</span><button class="text-button" data-dialog="climate">O připojení ↗</button></div>
+          </article>
+          <article class="card house-card"><div class="card-top"><span class="eyebrow">DOMÁCNOST</span><span class="small-icon">⌘</span></div><h2>Připraveno pro Green.</h2><p class="subtle">Tvůj budoucí mozek domácnosti.</p><div class="house-drawing" aria-hidden="true"><svg viewBox="0 0 200 120"><path d="M28 61 100 10l72 51M48 48v61h104V48M84 109V74h32v35M63 61h13v14H63m61-14h13v14h-13"/><circle cx="100" cy="43" r="6"/></svg></div><div class="status-row"><i class="dot amber"></i> Čeká na první zapojení</div><a class="button primary" href="http://homeassistant.local/" target="_blank" rel="noopener">Otevřít Home Assistant <span>↗</span></a></article>
+          <article class="card finance-card"><div class="card-top"><span class="eyebrow">WONDERS FINANCE</span><span class="small-icon">◈</span></div><h2>Peníze s nadhledem.</h2><p class="subtle">Tvůj přehled. Bobovy souvislosti.</p><div class="private-preview"><span class="privacy-icon">▧</span><div>Částky zůstávají v soukromí.<small>Finanční přehled otevřeš až ty.</small></div></div><a class="button" href="#finance">Přejít do financí <span>→</span></a><span class="micro">Komerční banka · import CSV se připravuje</span></article>
+          <article class="card forest-card"><div><p class="eyebrow">BITCOIN FOREST</p><h2>Každá transakce zapustí kořeny.</h2><p class="subtle">Otevři svůj lokální blockchainový les.</p></div><a class="round-link" href="http://127.0.0.1:8777" target="_blank" rel="noopener" aria-label="Otevřít Bitcoin Forest">↗</a><div class="tiny-forest" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="card bob-card"><span class="bob-symbol">b.</span><div><p class="eyebrow">BOB · TVŮJ FINANČNÍ PRŮVODCE</p><h2>Nejdřív přehled. Potom dobrá rozhodnutí.</h2><p class="subtle">Výdaje, opakované platby a prostor pro tvoje plány.</p></div><button class="text-button" data-dialog="bob">Jak to bude fungovat ↗</button></article>
+        </div>
+      </section>
+      <section id="finance-view" hidden aria-labelledby="finance-title">
+        <a class="back-link" href="#home">← Zpět domů</a><div class="welcome"><div><p class="eyebrow">WONDERS FINANCE · KOMERČNÍ BANKA</p><h1 id="finance-title">Věz, kam tvoje peníze rostou.</h1><p>Osobní finance a srozumitelná analýza od Boba.</p></div><span class="tag">SOUKROMÝ PŘEHLED</span></div>
+        <div class="finance-empty card"><span class="empty-symbol">◈</span><h2>Tvoje data mají místo. Teď je sem dostat.</h2><p>Začneme výpisem z Komerční banky. Bob pak vysvětlí, za co utrácíš,<br>co se opakuje a kde můžeš něco změnit.</p><button id="show-demo" class="button primary">Prohlédnout ukázkový měsíc <span>→</span></button><p class="micro">Tento návrh žádné bankovní výpisy nenačítá.</p></div>
+        <div id="finance-demo" hidden><div class="demo-notice">UKÁZKOVÝ ŘÍJEN 2026 · VYMYŠLENÉ ČÁSTKY · NENÍ TO TVŮJ ÚČET <button id="hide-demo" class="text-button">Skrýt ukázku ×</button></div><div class="finance-metrics"><article class="card"><p class="eyebrow">PŘÍJMY</p><h2>42 000 <small>Kč</small></h2></article><article class="card"><p class="eyebrow">VÝDAJE PO VRATKÁCH</p><h2>16 569,50 <small>Kč</small></h2></article><article class="card"><p class="eyebrow">PŘEVOD NA VLASTNÍ SPOŘENÍ</p><h2>5 000 <small>Kč</small></h2></article></div><div class="finance-detail"><article class="card"><p class="eyebrow">KAM PENÍZE ŠLY · PŘED VRATKAMI</p><h2>Výdaje v souvislostech</h2><div class="expense-row"><span>Bydlení</span><strong>14 500 Kč</strong><i style="--size:86%"></i></div><div class="expense-row"><span>Potraviny</span><strong>2 120,50 Kč</strong><i style="--size:13%"></i></div><div class="expense-row"><span>Digitální služby</span><strong>199 Kč</strong><i style="--size:2%"></i></div><p class="micro">Vratka 250 Kč snižuje celkové výdaje. Převod na spoření mezi ně nepatří.</p></article><article class="card"><p class="eyebrow">BOBŮV POHLED · UKÁZKA</p><h2>Prostor k zamyšlení.</h2><p class="insight">Za potraviny je v ukázce v říjnu o <strong>310,50 Kč více</strong> než v září. Je to větší nákup do zásoby, nebo změna běžných výdajů?</p><p class="insight">Platba <strong>199 Kč</strong> se opakuje třetí měsíc. Může jít o předplatné; nejdřív ověříme, co to je a jestli ho využíváš.</p><p class="micro">Z pohybů na účtu samotných nelze zjistit aktuální zůstatek ani celkové úspory.</p></article></div></div>
+      </section>
+      <footer>WONDERS <span>Žij po svém. Měj přehled.</span><span>Lokální návrh rozhraní · bez živého připojení</span></footer>
+    </main>
+  </div>
+  <dialog id="info-dialog"><button id="close-dialog" class="close-dialog" aria-label="Zavřít">×</button><p class="eyebrow" id="dialog-label"></p><h2 id="dialog-title"></h2><p id="dialog-body"></p><button id="dialog-ok" class="button primary">Rozumím</button></dialog>
+  <script src="hub.js"></script>
+</body>
+</html>

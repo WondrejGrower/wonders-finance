@@ -106,3 +106,15 @@ scripts/
 .windsurfrules
 .cursor/rules/dev_workflow.mdc
 .cursor/rules/taskmaster.mdc
+
+# Wonders Finance: private data and generated previews never belong in source.
+/.private/
+/imports/
+/exports/
+/reports/
+/hub/previews/
+__pycache__/
+*.pyc
+*.sqlite
+*.sqlite3
+*.db

@@ -1,0 +1,15 @@
+Datum zaúčtování;Částka;Měna;Popis;Kategorie;Účet;Druh
+01.08.2026;42000,00;CZK;Ukázkový příjem;Příjmy;DEMO;income
+03.08.2026;-14500,00;CZK;Ukázkové bydlení;Bydlení;DEMO;expense
+05.08.2026;-199,00;CZK;Ukázková digitální služba;Digitální služby;DEMO;expense
+10.08.2026;-1460,50;CZK;Ukázkový nákup;Potraviny;DEMO;expense
+01.09.2026;42000,00;CZK;Ukázkový příjem;Příjmy;DEMO;income
+03.09.2026;-14500,00;CZK;Ukázkové bydlení;Bydlení;DEMO;expense
+05.09.2026;-199,00;CZK;Ukázková digitální služba;Digitální služby;DEMO;expense
+10.09.2026;-1810,00;CZK;Ukázkový nákup;Potraviny;DEMO;expense
+01.10.2026;42000,00;CZK;Ukázkový příjem;Příjmy;DEMO;income
+03.10.2026;-14500,00;CZK;Ukázkové bydlení;Bydlení;DEMO;expense
+05.10.2026;-199,00;CZK;Ukázková digitální služba;Digitální služby;DEMO;expense
+10.10.2026;-2120,50;CZK;Ukázkový nákup;Potraviny;DEMO;expense
+12.10.2026;-5000,00;CZK;Ukázkový převod na spoření;Vlastní převod;DEMO;transfer
+13.10.2026;250,00;CZK;Ukázková vratka;Potraviny;DEMO;refund
